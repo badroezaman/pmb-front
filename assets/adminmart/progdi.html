@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
+    <title>PMB USM</title>
+    <!-- Custom CSS -->
+    <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- <header class="topbar" data-navbarbg="skin6"> -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="index.html">
+                            <b class="logo-icon">
+                                <img src="assets/images/logo-pmb-usm.png" alt="homepage" class="dark-logo" />
+                            </b>
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <!-- <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i>
+                    </a> -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Home
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                    class="hide-menu">Profil Fakultas</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="fakultas-ekonomi.html" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Ekonomi</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Hukum</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknik</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknologi Hasil Pertanian</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknologi Informasi dan Komunikasi</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Psikologi</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="alur-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-direction"></i><span class="hide-menu">Alur
+                                    Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="form-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-note"></i><span class="hide-menu">Form
+                                    Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="cek-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-check"></i><span class="hide-menu">Cek Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="nav-small-cap"><span class="hide-menu">Detail Informasi</span></li>
+
+                        <li class="sidebar-item">
+                            <div class="sidebar-link">
+                                <p>Gd. USM Information Center <br>
+                                    Jalan Soekarno-Hatta Semarang 50196 <br>
+                                    Telp. (024) 670-2757 <br>
+                                    HP. 085640012229</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- *************************************************************** -->
+                <!-- Content -->
+                <!-- *************************************************************** -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <img class="img-fluid" src="assets/images/big/pmb-usm.jpg" alt="Fakultas">
+                            <div class="card-body">
+                                <h4 class="card-title">Program Studi</h4>
+                                <h5 class="card-subtitle mt-2 mb-2 text-muted">Akreditasi</h5>
+                                <h5 class="card-subtitle mt-2 mb-4 text-muted">SK BAN-PT</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+                                    eu eros
+                                    consectetur, finibus dui a, dapibus sapien. Ut turpis nunc, pulvinar elementum diam
+                                    nec, tempus cursus justo. Sed in velit convallis, malesuada sapien eu, pellentesque
+                                    dolor. Etiam semper volutpat odio, eu dignissim leo luctus in. Nullam at sapien ut
+                                    ipsum gravida lobortis in vel justo. Suspendisse hendrerit volutpat posuere.
+                                    Maecenas eget suscipit arcu, at molestie mi. Sed ornare placerat sem sit amet
+                                    congue. In eu felis tincidunt, euismod metus non, fermentum nibh. Nunc et posuere
+                                    eros. Etiam lorem nulla, tincidunt vitae laoreet eu, auctor eu mi. Aenean a varius
+                                    quam.</p>
+                                <h5 class="card-subtitle mt-2 mb-2 text-muted">Misi</h5>
+                                <p class="card-text">
+                                    <ul class="list-style-none">
+                                        <li><i class="fa fa-check text-info"></i> Lorem ipsum dolor sit amet</li>
+                                        <li><i class="fa fa-check text-info"></i> Consectetur adipiscing elit</li>
+                                        <li><i class="fa fa-check text-info"></i> Integer molestie lorem at massa </li>
+                                    </ul>
+                                </p>
+                                <h5 class="card-subtitle mt-2 mb-2 text-muted">Tujuan</h5>
+                                <p class="card-text">Donec at elementum mi, eu commodo nibh. Pellentesque fringilla eget
+                                    velit in dictum.
+                                    Nulla felis ex, faucibus vitae interdum viverra, condimentum id arcu. Aliquam cursus
+                                    lectus quis est dapibus pulvinar. Curabitur in purus a risus commodo dapibus sit
+                                    amet in urna. Maecenas id convallis eros. Aliquam erat volutpat. Pellentesque
+                                    accumsan ligula sed nibh lacinia consequat. Nulla non diam ut purus vehicula
+                                    feugiat. Pellentesque congue diam eget elit tincidunt lobortis. Phasellus quis magna
+                                    ornare, volutpat libero ac, vestibulum nulla. Praesent interdum dolor sit amet purus
+                                    maximus luctus. Mauris vel quam nibh.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">D-III Manajemen Perusahaan</h4>
+                                <h5 class="card-subtitle">Akreditasi A</h5>
+                                <p class="card-text">(SK BAN-PT No. 3660/BAN-PT/Akred/Dpl-III/X/2017)
+                                    sejak 10 Oktober 2017 s/d 10 Oktober 2022</p>
+                                <a href="javascript:void(0)" class="btn btn-info">Detail</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">S-1 Manajemen</h4>
+                                <h5 class="card-subtitle">Akreditasi B</h5>
+                                <p class="card-text">(SK BAN-PT No. 001/BAN-PT/AK-VIII/S1/I/2005)</p>
+                                <a href="javascript:void(0)" class="btn btn-info">Detail</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">S-1 Akuntansi</h4>
+                                <h5 class="card-subtitle">Akreditasi B</h5>
+                                <p class="card-text">(SK BAN-PT No. 0207/SK/BAN-PT/Akred/S/IV/2016) sejak 15 April 2016
+                                    s/d 15 April 2021</p>
+                                <a href="javascript:void(0)" class="btn btn-info">Detail</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- *************************************************************** -->
+                <!-- End Content -->
+                <!-- *************************************************************** -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. Designed and Developed by <a
+                    href="https://wrappixel.com">WrapPixel</a>.
+            </footer> -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <script src="assets/extra-libs/c3/d3.min.js"></script>
+    <script src="assets/extra-libs/c3/c3.min.js"></script>
+    <script src="assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="dist/js/pages/dashboards/dashboard1.min.js"></script>
+</body>
+
+</html>

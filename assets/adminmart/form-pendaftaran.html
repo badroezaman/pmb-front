@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
+    <title>PMB USM</title>
+    <!-- Custom CSS -->
+    <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- <header class="topbar" data-navbarbg="skin6"> -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="index.html">
+                            <b class="logo-icon">
+                                <img src="assets/images/logo-pmb-usm.png" alt="homepage" class="dark-logo" />
+                            </b>
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <!-- <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i>
+                    </a> -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Home
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
+                                    class="hide-menu">Profil Fakultas</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="fakultas-ekonomi.html" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Ekonomi</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Hukum</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknik</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknologi Hasil Pertanian</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Teknologi Informasi dan Komunikasi</span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
+                                            class="hide-menu"> Fakultas Psikologi</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="alur-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-direction"></i><span class="hide-menu">Alur
+                                    Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="form-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-note"></i><span class="hide-menu">Form
+                                    Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="cek-pendaftaran.html"
+                                aria-expanded="false"><i class="icon-check"></i><span class="hide-menu">Cek Pendaftaran
+                                </span></a>
+                        </li>
+                        <li class="nav-small-cap"><span class="hide-menu">Detail Informasi</span></li>
+
+                        <li class="sidebar-item">
+                            <div class="sidebar-link">
+                                <p>Gd. USM Information Center <br>
+                                    Jalan Soekarno-Hatta Semarang 50196 <br>
+                                    Telp. (024) 670-2757 <br>
+                                    HP. 085640012229</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- *************************************************************** -->
+                <!-- Content -->
+                <!-- *************************************************************** -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Form Pendaftaran Mahasiswa Baru Universitas Semarang
+                                </h3>
+                                <h4 class="card-title text-center">Semester Gasal 2020/2021
+                                </h4>
+
+                                <form action="" method="">
+                                    <h4 class="card-title mt-5 text-uppercase"><i class="icon-user"></i> Identitas
+                                        Pribadi
+                                    </h4>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">NIK</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="3312341234561234">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nama sesuai KTP</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="nama anda sesuai KTP">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Tempat Lahir</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="tempat lahir anda">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Tanggal Lahir</label>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <select name="tanggal" class="form-control">
+                                                                <option value="">Tanggal</option>
+                                                                <option value="01"> 01</option>
+                                                                <option value="02"> 02</option>
+                                                                <option value="03"> 03</option>
+                                                                <option value="04"> 04</option>
+                                                                <option value="05"> 05</option>
+                                                                <option value="06"> 06</option>
+                                                                <option value="07"> 07</option>
+                                                                <option value="08"> 08</option>
+                                                                <option value="09"> 09</option>
+                                                                <option value="10"> 10</option>
+                                                                <option value="11"> 11</option>
+                                                                <option value="12"> 12</option>
+                                                                <option value="13"> 13</option>
+                                                                <option value="14"> 14</option>
+                                                                <option value="15"> 15</option>
+                                                                <option value="16"> 16</option>
+                                                                <option value="17"> 17</option>
+                                                                <option value="18"> 18</option>
+                                                                <option value="19"> 19</option>
+                                                                <option value="20"> 20</option>
+                                                                <option value="21"> 21</option>
+                                                                <option value="22"> 22</option>
+                                                                <option value="23"> 23</option>
+                                                                <option value="24"> 24</option>
+                                                                <option value="25"> 25</option>
+                                                                <option value="26"> 26</option>
+                                                                <option value="27"> 27</option>
+                                                                <option value="28"> 28</option>
+                                                                <option value="29"> 29</option>
+                                                                <option value="30"> 30</option>
+                                                                <option value="31"> 31</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <select name="bulan" class="form-control">
+                                                                <option value="">Bulan</option>
+                                                                <option value="01"> 01</option>
+                                                                <option value="02"> 02</option>
+                                                                <option value="03"> 03</option>
+                                                                <option value="04"> 04</option>
+                                                                <option value="05"> 05</option>
+                                                                <option value="06"> 06</option>
+                                                                <option value="07"> 07</option>
+                                                                <option value="08"> 08</option>
+                                                                <option value="09"> 09</option>
+                                                                <option value="10"> 10</option>
+                                                                <option value="11"> 11</option>
+                                                                <option value="12"> 12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="tahun"
+                                                                placeholder="Tahun" minlength="4" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Jenis Kelamin</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="Laki-laki"
+                                                            value="Laki-laki" name="jenis_kelamin">
+                                                        <label class="custom-control-label"
+                                                            for="Laki-laki">Laki-laki</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="Perempuan"
+                                                            value="Perempuan" name="jenis_kelamin">
+                                                        <label class="custom-control-label"
+                                                            for="Perempuan">Perempuan</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Agama</label>
+                                            <div class="col-lg-8">
+                                                <select name="agama" class="form-control">
+                                                    <option value="">Pilih agama sesuai KTP</option>
+                                                    <option value="Islam">Islam</option>
+                                                    <option value="Kristen"> Kristen</option>
+                                                    <option value="Hindu"> Hindu</option>
+                                                    <option value="Budha"> Budha</option>
+                                                    <option value="Katolik"> Katolik</option>
+                                                    <option value="Konghucu"> Konghucu</option>
+                                                    <option value="Penghayat Kepercayaan"> Penghayat Kepercayaan
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Kewarganegaraan</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="WNI"
+                                                            value="WNI" name="warganegara_ktp">
+                                                        <label class="custom-control-label" for="WNI">WNI</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="WNA"
+                                                            value="WNA" name="warganegara_ktp">
+                                                        <label class="custom-control-label" for="WNA">WNA</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Status</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="Duda"
+                                                            value="Duda" name="marital">
+                                                        <label class="custom-control-label" for="Duda">Duda</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="Janda"
+                                                            value="Janda" name="marital">
+                                                        <label class="custom-control-label" for="Janda">Janda</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="Menikah"
+                                                            value="Menikah" name="marital">
+                                                        <label class="custom-control-label"
+                                                            for="Menikah">Menikah</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input"
+                                                            id="Belum Menikah" value="Belum Menikah" name="marital">
+                                                        <label class="custom-control-label" for="Belum Menikah">Belum
+                                                            Menikah</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Golongan Darah</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="A"
+                                                            value="A" name="gol_drh">
+                                                        <label class="custom-control-label" for="A">A</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="B"
+                                                            value="B" name="gol_drh">
+                                                        <label class="custom-control-label" for="B">B</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="AB"
+                                                            value="AB" name="gol_drh">
+                                                        <label class="custom-control-label" for="AB">AB</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="O"
+                                                            value="O" name="gol_drh">
+                                                        <label class="custom-control-label" for="O">O</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Alamat Domisili</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="ketikkan alamat domisili/alamat tinggal sekarang anda">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Alamat sesuai KTP</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="ketikkan alamat sesuai KTP anda">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">RT / RW sesuai KTP</label>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="rt"
+                                                                placeholder="RT" minlength="4" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="rw"
+                                                                placeholder="RW" minlength="4" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Propinsi, Kota/Kab, Kecamatan sesuai
+                                                KTP</label>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih propinsi</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih kota/kab</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- <div class="col-lg-6">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih kecamatan</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control text-uppercase"
+                                                                name="kelurahan" placeholder="kelurahan">
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih kecamatan</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control text-uppercase"
+                                                                name="kelurahan" placeholder="kelurahan">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nomor Handphone</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="handphone"
+                                                        placeholder="081234567891" minlength="12" maxlength="12">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">E-mail</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email"
+                                                        placeholder="nama@email.com">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nama Ibu Kandung</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control text-uppercase" name="ibu"
+                                                        placeholder="ketikkan nama ibu kandung anda">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title mt-4 text-uppercase"><i class="icon-badge"></i> Data
+                                        Pendidikan
+                                    </h4>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Pendidikan Terakhir</label>
+                                            <div class="col-lg-8">
+                                                <select name="history_sma" class="form-control">
+                                                    <option value="">Pilih pendidikan terakhir</option>
+                                                    <option value="SMA">SMA / SMK /
+                                                        Sederajat</option>
+                                                    <option value="D3">D3 /
+                                                        Politeknik / Sederajat</option>
+                                                </select>
+                                                <!-- <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="pendakhir1"
+                                                            value="SMA" name="pendidikan_terakhir">
+                                                        <label class="custom-control-label" for="pendakhir1">SMA / SMK /
+                                                            Sederajat</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="pendakhir2"
+                                                            value="D3" name="pendidikan_terakhir">
+                                                        <label class="custom-control-label" for="pendakhir2">D3 /
+                                                            Politeknik / Sederajat</label>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Jenis Sekolah</label>
+                                            <div class="col-lg-8">
+                                                <select name="history_sma" class="form-control">
+                                                    <option value="">Pilih jenis sekolah</option>
+                                                    <option value="SMU">SMU</option>
+                                                    <option value="SMA">SMA</option>
+                                                    <option value="SMK">SMK</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="Paket C">Paket C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Propinsi dan Kota/Kab Sekolah</label>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih propinsi</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <select name="agama" class="form-control">
+                                                            <option value="">Pilih kota/kab</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nama Sekolah</label>
+                                            <div class="col-lg-8">
+                                                <select name="agama" class="form-control">
+                                                    <option value="">Pilih nama sekolah</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nomor Induk/NISN</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="0123456789">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Nomor Ijazah</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="IJZ0123456789">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Dan NEM</label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control text-uppercase"
+                                                    placeholder="36.78">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Tanggal Lulus</label>
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <select name="tanggal" class="form-control">
+                                                                <option value="">Tanggal</option>
+                                                                <option value="01"> 01</option>
+                                                                <option value="02"> 02</option>
+                                                                <option value="03"> 03</option>
+                                                                <option value="04"> 04</option>
+                                                                <option value="05"> 05</option>
+                                                                <option value="06"> 06</option>
+                                                                <option value="07"> 07</option>
+                                                                <option value="08"> 08</option>
+                                                                <option value="09"> 09</option>
+                                                                <option value="10"> 10</option>
+                                                                <option value="11"> 11</option>
+                                                                <option value="12"> 12</option>
+                                                                <option value="13"> 13</option>
+                                                                <option value="14"> 14</option>
+                                                                <option value="15"> 15</option>
+                                                                <option value="16"> 16</option>
+                                                                <option value="17"> 17</option>
+                                                                <option value="18"> 18</option>
+                                                                <option value="19"> 19</option>
+                                                                <option value="20"> 20</option>
+                                                                <option value="21"> 21</option>
+                                                                <option value="22"> 22</option>
+                                                                <option value="23"> 23</option>
+                                                                <option value="24"> 24</option>
+                                                                <option value="25"> 25</option>
+                                                                <option value="26"> 26</option>
+                                                                <option value="27"> 27</option>
+                                                                <option value="28"> 28</option>
+                                                                <option value="29"> 29</option>
+                                                                <option value="30"> 30</option>
+                                                                <option value="31"> 31</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <select name="bulan" class="form-control">
+                                                                <option value="">Bulan</option>
+                                                                <option value="01"> 01</option>
+                                                                <option value="02"> 02</option>
+                                                                <option value="03"> 03</option>
+                                                                <option value="04"> 04</option>
+                                                                <option value="05"> 05</option>
+                                                                <option value="06"> 06</option>
+                                                                <option value="07"> 07</option>
+                                                                <option value="08"> 08</option>
+                                                                <option value="09"> 09</option>
+                                                                <option value="10"> 10</option>
+                                                                <option value="11"> 11</option>
+                                                                <option value="12"> 12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="tahun"
+                                                                placeholder="Tahun" minlength="4" maxlength="4">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Status Sekolah</label>
+                                            <div class="col-lg-8">
+                                                <select name="stat_slta" class="form-control">
+                                                    <option value="">Pilih status sekolah</option>
+                                                    <option value="negeri">Negeri</option>
+                                                    <option value="swasta">Swasta</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="card-title mt-4 text-uppercase"><i class="icon-rocket"></i> Pendaftaran
+                                    </h4>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Jalur Daftar</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="jalur1"
+                                                            value="R" name="jalur">
+                                                        <label class="custom-control-label" for="jalur1">Reguler</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="jalur2"
+                                                            value="P" name="jalur">
+                                                        <label class="custom-control-label"
+                                                            for="jalur2">Prestasi</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Pilihan Kelas</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="pagi"
+                                                            value="Pagi" name="kelas">
+                                                        <label class="custom-control-label" for="pagi">Pagi</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="sore"
+                                                            value="Sore" name="kelas">
+                                                        <label class="custom-control-label" for="sore">Sore</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="karyawan"
+                                                            value="Karyawan" name="kelas">
+                                                        <label class="custom-control-label"
+                                                            for="karyawan">Karyawan</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Disiplin Ilmu</label>
+                                            <div class="col-lg-8">
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="disiplin1"
+                                                            value="sebidang" name="disiplin">
+                                                        <label class="custom-control-label"
+                                                            for="disiplin1">Sebidang</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" id="disiplin2"
+                                                            value="tidak" name="disiplin">
+                                                        <label class="custom-control-label" for="disiplin2">Tidak
+                                                            Sebidang</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Pilih Jalur Prestasi</label>
+                                            <div class="col-lg-8">
+                                                <select name="agama" class="form-control">
+                                                    <option value="">Pilih jalur prestasi</option>
+                                                    <option value="Islam">Umum</option>
+                                                    <option value="Kristen"> Akademis</option>
+                                                    <option value="Hindu"> Non Akademis Atlet</option>
+                                                    <option value="Budha"> Non Akademis Seni & Budaya</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Info PMB</label>
+                                            <div class="col-lg-8">
+                                                <select class="form-control" name="info1">
+                                                    <option value="">Pilih info PMB</option>
+                                                    <option value="Brosur">Brosur</option>
+                                                    <option value="Email">Email</option>
+                                                    <option value="Event/Pameran">Event/Pameran</option>
+                                                    <option value="Internet">Internet</option>
+                                                    <option value="Keluarga">Keluarga</option>
+                                                    <option value="Poster">Poster</option>
+                                                    <option value="Radio">Radio</option>
+                                                    <option value="SMS">SMS</option>
+                                                    <option value="Spanduk">Spanduk</option>
+                                                    <option value="Surat Kabar">Surat Kabar</option>
+                                                    <option value="Teman Kantor/Kuliah">Teman Kantor/Kuliah</option>
+                                                    <option value="Teman Sekolah">Teman Sekolah</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Jumlah Pilihan Progdi</label>
+                                            <div class="col-lg-8">
+                                                <select class="form-control" name="milih">
+                                                    <option value="">Jumlah pilihan progdi</option>
+                                                    <option value="1">(1) Satu</option>
+                                                    <option value="2">(2) Dua</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Pilihan 1</label>
+                                            <div class="col-lg-8">
+                                                <select class="form-control" name="plhn1">
+                                                    <option value="">Pilihan Progdi 1</option>
+                                                    <option value="A11A">ILMU HUKUM</option>
+                                                    <option value="B11A">MANAJEMEN</option>
+                                                    <option value="B13B">MANAJEMEN PERUSAHAAN</option>
+                                                    <option value="B21A">AKUNTANSI</option>
+                                                    <option value="C11A">TEKNIK SIPIL</option>
+                                                    <option value="C41A">TEKNIK ELEKTRO</option>
+                                                    <option value="C51A">PERENCANAN WILAYAH DAN KOTA</option>
+                                                    <option value="D11A">TEKNOLOGI HASIL PERTANIAN</option>
+                                                    <option value="F11A">PSIKOLOGI</option>
+                                                    <option value="G11A">SISTEM INFORMASI</option>
+                                                    <option value="G21A">TEKNIK INFORMATIKA</option>
+                                                    <option value="G31A">ILMU KOMUNIKASI</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label class="col-lg-4">Pilihan 2</label>
+                                            <div class="col-lg-8">
+                                                <select class="form-control" name="plhn2">
+                                                    <option value="">Pilihan Progdi 2</option>
+                                                    <option value="A11A">ILMU HUKUM</option>
+                                                    <option value="B11A">MANAJEMEN</option>
+                                                    <option value="B13B">MANAJEMEN PERUSAHAAN</option>
+                                                    <option value="B21A">AKUNTANSI</option>
+                                                    <option value="C11A">TEKNIK SIPIL</option>
+                                                    <option value="C41A">TEKNIK ELEKTRO</option>
+                                                    <option value="C51A">PERENCANAN WILAYAH DAN KOTA</option>
+                                                    <option value="D11A">TEKNOLOGI HASIL PERTANIAN</option>
+                                                    <option value="F11A">PSIKOLOGI</option>
+                                                    <option value="G11A">SISTEM INFORMASI</option>
+                                                    <option value="G21A">TEKNIK INFORMATIKA</option>
+                                                    <option value="G31A">ILMU KOMUNIKASI</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions mt-5">
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-info"><i class="icon-user-follow"></i>
+                                                DAFTAR</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- *************************************************************** -->
+                <!-- End Content -->
+                <!-- *************************************************************** -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. Designed and Developed by <a
+                    href="https://wrappixel.com">WrapPixel</a>.
+            </footer> -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <script src="assets/extra-libs/c3/d3.min.js"></script>
+    <script src="assets/extra-libs/c3/c3.min.js"></script>
+    <script src="assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="dist/js/pages/dashboards/dashboard1.min.js"></script>
+</body>
+
+</html>
